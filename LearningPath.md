@@ -1,6 +1,6 @@
 # C++ Learning Path
 
-## Introduction to Language (Beginner — Start Here)
+## Introduction to Language
 - What is C++?
 - Why use C++
 - C vs C++

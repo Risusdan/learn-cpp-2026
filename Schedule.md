@@ -1,6 +1,6 @@
 # C++ Expert Learning Schedule
 
-**Scope**: All required topics from the [Learning Path](Learning_Path.md) (OPTIONAL topics excluded)
+**Scope**: All required topics from the [Learning Path](LearningPath.md) (OPTIONAL topics excluded)
 
 ## Progress Tracker
 
