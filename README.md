@@ -12,3 +12,7 @@ A structured path to becoming an expert C++ developer in 20 weeks.
 ### Week 1 — Introduction & Environment Setup
 - [Introduction to C++](weeks/week-01/introduction-to-cpp.md)
 - [Environment Setup](weeks/week-01/environment-setup.md)
+
+### Week 2 — Operators & Control Flow
+- [Operators](weeks/week-02/operators.md)
+- [Control Flow](weeks/week-02/control-flow.md)
