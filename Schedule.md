@@ -6,8 +6,8 @@
 
 | Week | Topic                                          | Status         |
 | ---- | ---------------------------------------------- | -------------- |
-| 1    | Introduction & Environment Setup               | ⬜ Not started |
-| 2    | Operators & Control Flow                       | ⬜ Not started |
+| 1    | Introduction & Environment Setup               | ✅ Done        |
+| 2    | Operators & Control Flow                       | ✅ Done        |
 | 3    | Functions — Overloading & Operator Overloading | ⬜ Not started |
 | 4    | Lambdas & Static Polymorphism                  | ⬜ Not started |
 | 5    | Data Types & References / Memory Model         | ⬜ Not started |
