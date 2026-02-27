@@ -15,6 +15,13 @@ This is a self-study curriculum for learning C++ from fundamentals to expert lev
 2. Only cover topics listed in the schedule. Respect OPTIONAL markers in `LearningPath.md` — do not include OPTIONAL topics unless explicitly asked.
 3. Create lesson files at `weeks/week-NN/topic-name.md` (e.g., `weeks/week-06/smart-pointers.md`).
 4. One file per major topic grouping within a week. If a week covers multiple distinct topics, split them into separate files.
+5. **Update `README.md`** after generating lessons — add or update a `## Lessons` section with links grouped by week. Use the week title from `Schedule.md`:
+   ```markdown
+   ## Lessons
+
+   ### Week 1 — [Week Title from Schedule]
+   - [Lesson Title](weeks/week-01/lesson-name.md)
+   ```
 
 ## Lesson File Template
 
@@ -24,6 +31,12 @@ Every lesson file must follow this exact structure:
 # Topic Name
 
 > One-sentence summary of what this topic is and why it matters.
+
+## Table of Contents
+- [Core Concepts](#core-concepts)
+- [Code Examples](#code-examples)
+- [Common Pitfalls](#common-pitfalls)
+- [Key Takeaways](#key-takeaways)
 
 ## Core Concepts
 
