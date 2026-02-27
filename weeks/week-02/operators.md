@@ -12,13 +12,17 @@
 
 ### Arithmetic Operators
 
-**What.** The arithmetic operators are `+` (addition), `-` (subtraction), `*` (multiplication), `/` (division), and `%` (modulo/remainder). They work on numeric types — integers and floating-point numbers.
+#### What
 
-**How.** They behave like you'd expect from math, with one critical exception: **integer division truncates toward zero**. When both operands are integers, `/` discards the fractional part entirely. `7 / 2` is `3`, not `3.5`. The modulo operator `%` gives you the remainder after integer division: `7 % 2` is `1`.
+The arithmetic operators are `+`, `-`, `*`, `/`, and `%`. They behave like you'd expect from math, with one critical exception: **integer division truncates toward zero**. When both operands are integers, `/` discards the fractional part entirely. `7 / 2` is `3`, not `3.5`. The modulo operator `%` gives you the remainder: `7 % 2` is `1`.
 
-**Why this matters.** Integer division is the source of a surprising number of bugs, especially when computing averages, percentages, or ratios. The compiler won't warn you — it silently truncates. If you need a floating-point result, at least one operand must be a floating-point type.
+#### How
 
-The distinction between integer and floating-point division exists because CPUs have separate instruction paths for integer and floating-point arithmetic. Integer division is faster and produces exact results (no rounding errors). The language preserves this distinction so you don't pay for floating-point overhead when you don't need it.
+This is the source of a surprising number of bugs, especially when computing averages, percentages, or ratios. The compiler won't warn you — it silently truncates. If you need a floating-point result, at least one operand must be a floating-point type.
+
+#### Why It Matters
+
+The distinction exists because CPUs have separate instruction paths for integer and floating-point arithmetic. Integer division is faster and produces exact results (no rounding errors). The language preserves this distinction so you don't pay for floating-point overhead when you don't need it.
 
 ### Implicit Conversions and Promotion
 
@@ -32,19 +36,25 @@ These rules exist because the CPU operates on fixed-width registers. You can't a
 
 ### Logical Operators
 
-**What.** The logical operators are `&&` (AND), `||` (OR), and `!` (NOT). They operate on boolean values and produce boolean results.
+#### What
 
-**How.** `&&` returns `true` only if both operands are `true`. `||` returns `true` if at least one operand is `true`. `!` inverts its operand. Any non-zero value is truthy; zero is falsy.
+The logical operators `&&` (AND), `||` (OR), and `!` (NOT) operate on boolean values and produce boolean results. `&&` returns `true` only if both operands are `true`. `||` returns `true` if at least one is `true`. `!` inverts. Any non-zero value is truthy; zero is falsy.
 
-**Why short-circuit evaluation matters.** C++ guarantees **left-to-right evaluation with short-circuiting**: `&&` stops evaluating as soon as it finds a `false`, and `||` stops as soon as it finds a `true`. This isn't just an optimization — it's a language guarantee you can rely on for correctness.
+#### How
 
-Consider `if (ptr != nullptr && ptr->value > 0)`. Without short-circuit evaluation, the second operand would dereference a null pointer. With short-circuiting, if `ptr` is null, the second check never executes. This pattern is idiomatic C++ — you'll see it everywhere.
+The most important thing about logical operators is **short-circuit evaluation**. C++ guarantees left-to-right evaluation: `&&` stops as soon as it finds a `false`, and `||` stops as soon as it finds a `true`. This isn't just an optimization — it's a language guarantee you rely on for correctness.
 
-Short-circuit evaluation also has performance implications. Place the cheapest or most likely-to-short-circuit condition first. If `is_cached()` is a quick boolean check and `compute_result()` is expensive, write `if (is_cached() || compute_result())` — the expensive call is skipped when the cache hits.
+Consider `if (ptr != nullptr && ptr->value > 0)`. Without short-circuiting, the second operand would dereference a null pointer. With it, if `ptr` is null, the second check never executes. This pattern is idiomatic C++ — you'll see it everywhere.
+
+#### Why It Matters
+
+Short-circuiting also has performance implications. Place the cheapest or most likely-to-short-circuit condition first. If `is_cached()` is a quick boolean check and `compute_result()` is expensive, write `if (is_cached() || compute_result())` — the expensive call is skipped when the cache hits.
 
 ### Bitwise Operators
 
-**What.** Bitwise operators manipulate individual bits within integer types:
+#### What
+
+Bitwise operators manipulate individual bits within integer types:
 
 | Operator | Name        | Description                          |
 | -------- | ----------- | ------------------------------------ |
@@ -55,11 +65,11 @@ Short-circuit evaluation also has performance implications. Place the cheapest o
 | `<<`     | Left shift  | Shifts bits left, fills with 0s      |
 | `>>`     | Right shift | Shifts bits right (sign-dependent)   |
 
-**How.** These operators work on the binary representation of integers, one bit at a time. `&` and `|` combine bits, `^` finds differences, `~` inverts, and shifts multiply or divide by powers of two.
+#### How
 
-**Why.** Bitwise operations are the foundation of systems programming. They're how you interact with hardware registers, network protocol headers, file permission flags, and any domain where data is packed into individual bits for efficiency.
+They work on the binary representation of integers, one bit at a time. `&` and `|` combine bits, `^` finds differences, `~` inverts, and shifts multiply or divide by powers of two.
 
-The key patterns:
+Bitwise operations are the foundation of systems programming — they're how you interact with hardware registers, network protocol headers, file permission flags, and any domain where data is packed into individual bits for efficiency. The four key patterns:
 
 - **Set a bit**: `flags |= MASK` — turns on specific bits
 - **Clear a bit**: `flags &= ~MASK` — turns off specific bits

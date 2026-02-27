@@ -12,11 +12,13 @@
 
 ### Branching: if / else
 
-**What.** The `if` statement evaluates a condition and executes a block of code only if the condition is true. `else` provides an alternative path. `else if` chains multiple conditions.
+#### What
 
-**How.** The condition is any expression convertible to `bool`. Zero is false; everything else is true. Pointers are implicitly convertible to `bool` — a null pointer is false, a non-null pointer is true.
+The `if` statement evaluates a condition and executes a block of code only if the condition is true. `else` provides an alternative path. `else if` chains multiple conditions. The condition is any expression convertible to `bool` — zero is false, everything else is true. Pointers are implicitly convertible: null is false, non-null is true.
 
-**Why.** Branching is how programs make decisions. The key design insight in C++ is that `if` conditions can include **initializer statements** (C++17), which lets you declare a variable scoped to the `if` block — reducing scope pollution and making the intent clearer.
+#### How
+
+The key design insight in modern C++ is that `if` conditions can include **initializer statements** (C++17), letting you declare a variable scoped to the `if`/`else` block. This reduces scope pollution and makes intent clearer.
 
 ```cpp
 // C++17: if with initializer — the variable is scoped to the if/else block
@@ -30,15 +32,19 @@ if (auto it = map.find(key); it != map.end()) {
 // 'it' is not accessible here — scope is limited, which is the point
 ```
 
+#### Why It Matters
+
 This pattern exists because in pre-C++17 code, you'd have to declare `it` outside the `if`, polluting the enclosing scope with a variable you only need inside the conditional.
 
 ### Branching: switch
 
-**What.** A `switch` statement compares a single expression against a set of compile-time constant values and jumps directly to the matching `case`.
+#### What
 
-**How.** The expression must be an integral or enum type (no strings, no floating-point). Each `case` must be a compile-time constant. Execution falls through from one case to the next unless you `break` — this is deliberate, inherited from C, and almost always a source of bugs.
+A `switch` statement compares a single expression against a set of compile-time constant values and jumps directly to the matching `case`. The expression must be an integral or enum type (no strings, no floating-point). Each `case` must be a compile-time constant. Execution falls through from one case to the next unless you `break` — this is deliberate, inherited from C, and almost always a source of bugs.
 
-**Why.** `switch` exists because it can be compiled into a **jump table** — the compiler generates an array of addresses and indexes directly into it, making dispatch O(1) regardless of the number of cases. This is faster than a chain of `if`/`else if` comparisons, and the compiler can warn you about unhandled enum values.
+#### How
+
+The reason `switch` exists alongside `if`/`else if` chains is performance: it can be compiled into a **jump table** — the compiler generates an array of addresses and indexes directly into it, making dispatch O(1) regardless of the number of cases. As a bonus, the compiler can warn you about unhandled enum values.
 
 ```mermaid
 graph TD
@@ -53,15 +59,21 @@ graph TD
     F --> G
 ```
 
+#### Why It Matters
+
 C++17 added `[[fallthrough]]` — an attribute that documents intentional fallthrough, letting the compiler warn on accidental fallthroughs while silencing warnings on deliberate ones.
 
 ### Branching: goto
 
-**What.** `goto` unconditionally jumps to a labeled statement within the same function.
+#### What
 
-**How.** You define a label (`label_name:`) and jump to it with `goto label_name`. The label must be in the same function. You cannot jump past variable initialization in C++ (the compiler enforces this).
+`goto` unconditionally jumps to a labeled statement within the same function. You define a label (`label_name:`) and jump to it with `goto label_name`. The label must be in the same function, and you cannot jump past variable initialization — the compiler enforces this.
 
-**Why it's almost never appropriate.** `goto` creates unstructured control flow — it makes code harder to reason about, harder to maintain, and harder for the compiler to optimize. Modern C++ has exceptions, RAII, and structured loops that handle every legitimate use case for `goto`.
+#### How
+
+In practice, `goto` is almost never appropriate. It creates unstructured control flow that's harder to reason about, harder to maintain, and harder for the compiler to optimize. Modern C++ has exceptions, RAII, and structured loops that handle every legitimate use case.
+
+#### Why It Matters
 
 The one accepted exception: **breaking out of deeply nested loops**. Some style guides permit `goto` for this pattern because C++ lacks a `break N` construct. However, refactoring the nested loops into a separate function (and using `return`) is usually cleaner.
 
@@ -83,15 +95,21 @@ found:
 
 ### Loops: for
 
-**What.** The `for` loop is C++'s most versatile iteration construct. It has three forms:
+#### What
+
+The `for` loop is C++'s most versatile iteration construct. It comes in three forms:
 
 1. **Classic `for`**: `for (init; condition; increment)` — full control over initialization, termination, and stepping.
 2. **Range-based `for`** (C++11): `for (auto& x : container)` — iterates over every element in a container or range.
 3. **Infinite loop**: `for (;;)` — loops forever until explicitly broken.
 
-**How.** In the classic form, `init` runs once, `condition` is checked before each iteration, and `increment` runs after each iteration. Any of the three parts can be omitted.
+#### How
 
-**Why range-based `for` is preferred.** The range-based `for` loop is shorter, clearer, and less error-prone than index-based iteration. It works with any type that provides `begin()` and `end()` — all standard containers, C arrays, and `std::initializer_list`. Use it as your default; only fall back to index-based loops when you actually need the index.
+In the classic form, `init` runs once, `condition` is checked before each iteration, and `increment` runs after each iteration. Any of the three parts can be omitted.
+
+#### Why It Matters
+
+Range-based `for` should be your default. It's shorter, clearer, and eliminates off-by-one errors. It works with any type that provides `begin()` and `end()` — all standard containers, C arrays, and `std::initializer_list`. Only fall back to index-based loops when you actually need the index.
 
 ```mermaid
 graph LR
@@ -104,11 +122,13 @@ graph LR
 
 ### Loops: while and do while
 
-**What.** `while` checks the condition *before* each iteration. `do while` checks *after* — guaranteeing the body runs at least once.
+#### What
 
-**How.** `while (condition) { body; }` — if the condition is false initially, the body never runs. `do { body; } while (condition);` — the body always runs at least once, then the condition decides whether to repeat.
+`while` checks the condition *before* each iteration — if the condition is false initially, the body never runs. `do while` checks *after*, guaranteeing the body runs at least once.
 
-**Why `do while` exists.** The guarantee of at least one execution is essential for patterns like input validation (prompt, then check), retry loops (attempt, then verify), and menu systems (display, then check for exit). These patterns read awkwardly as `while` loops because you'd need to duplicate code before the loop.
+#### Why It Matters
+
+The reason `do while` exists alongside `while` is that some patterns inherently need at least one execution: input validation (prompt, then check), retry loops (attempt, then verify), and menu systems (display, then check for exit). These read awkwardly as `while` loops because you'd need to duplicate code before the loop.
 
 ### Loop Control: break and continue
 

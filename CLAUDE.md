@@ -46,6 +46,9 @@ For every concept, cover three layers:
 2. HOW — how does it work / how do you use it?
 3. WHY — why does it exist? Why this approach over alternatives? Why does it matter?
 The "why" is the most important layer — it builds lasting intuition.
+Use `####` subheadings (What / How / Why It Matters) under each `###` concept heading
+to keep the three layers visually distinct and scannable.
+Do NOT use inline bold labels like "**What.**" — they blend into paragraph text.
 Build intuition first, then add precision. Use analogies for abstract ideas.
 Keep paragraphs short (3-5 sentences max).
 Use Mermaid diagrams (```mermaid blocks) when visual representation helps —
