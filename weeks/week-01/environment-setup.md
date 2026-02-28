@@ -7,6 +7,7 @@
 - [Code Examples](#code-examples)
 - [Common Pitfalls](#common-pitfalls)
 - [Key Takeaways](#key-takeaways)
+- [Exercises](#exercises)
 
 ## Core Concepts
 
@@ -260,3 +261,10 @@ Source files are text — they're instructions for the compiler, not for the OS.
 - **Know the three stages**: compile (syntax check) -> link (resolve symbols) -> execute (run). The stage tells you what kind of error you're dealing with.
 - **VS Code + clangd** is the recommended editor setup — free, cross-platform, and provides IDE-quality C++ intelligence.
 - **The compile-then-run workflow** is fundamental: write source code, compile to a binary, execute the binary. There is no interpreter.
+
+## Exercises
+
+1. Explain the difference between a compiler error and a linker error. Give one example of each.
+2. What does the `-std=c++17` flag tell the compiler, and what happens if you use a C++17 feature without it?
+3. Write a program split across two files (`math_utils.h` / `math_utils.cpp` and `main.cpp`) that defines and uses a `square(int)` function. Write the commands to compile and link them.
+4. Explain what the preprocessor does and why `#include` guards (or `#pragma once`) are necessary.

@@ -7,6 +7,7 @@
 - [Code Examples](#code-examples)
 - [Common Pitfalls](#common-pitfalls)
 - [Key Takeaways](#key-takeaways)
+- [Exercises](#exercises)
 
 ## Core Concepts
 
@@ -234,3 +235,10 @@ C++ is *mostly* a superset of C, but not entirely. Implicit `void*` conversions,
 - **RAII** is the defining pattern that separates C++ from C — resources are tied to object lifetimes, eliminating manual cleanup and the bugs that come with it.
 - Modern C++ (C++11 and later) is a fundamentally different language from C — write idiomatic C++, not "C with classes."
 - C++ gives you the choice of paradigm: procedural, object-oriented, generic, or functional — pick the one that fits your problem.
+
+## Exercises
+
+1. Explain what "zero-cost abstractions" means in C++ and give one example from the standard library.
+2. What are three key differences between C and C++ that make C++ more suitable for large-scale software?
+3. Write a C++ program that demonstrates the difference between `std::string` and a C-style `char[]` — show a case where `std::string` prevents a common C bug.
+4. Explain why C++ uses a compile-link-execute model rather than interpretation. What trade-offs does this create?

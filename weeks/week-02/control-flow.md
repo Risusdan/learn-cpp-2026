@@ -7,6 +7,7 @@
 - [Code Examples](#code-examples)
 - [Common Pitfalls](#common-pitfalls)
 - [Key Takeaways](#key-takeaways)
+- [Exercises](#exercises)
 
 ## Core Concepts
 
@@ -537,3 +538,15 @@ Modifying a container while iterating over it is one of the most dangerous patte
 - **Always `break` in switch cases** unless fallthrough is intentional, and mark intentional fallthrough with `[[fallthrough]]`.
 - **Guard clauses with early return** keep code flat and readable — handle edge cases first, then write the main logic at minimal indentation.
 - **Never modify a container while iterating** over it with range-based `for`. Use the erase-remove idiom or `std::erase_if` (C++20) instead.
+
+## Exercises
+
+1. Rewrite the following code using a C++17 if-with-initializer to limit the scope of `it`:
+   ```cpp
+   auto it = map.find(key);
+   if (it != map.end()) { use(it->second); }
+   ```
+2. Explain what `[[fallthrough]]` does in a switch statement and why it was added in C++17.
+3. Write a program that uses a range-based `for` loop to print only the even numbers from a `std::vector<int>`.
+4. Explain when you would use a `do while` loop instead of a `while` loop. Give a concrete example.
+5. Why does declaring a variable inside a `switch` case without braces cause a compiler error? What is the fix?

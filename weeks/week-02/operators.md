@@ -7,6 +7,7 @@
 - [Code Examples](#code-examples)
 - [Common Pitfalls](#common-pitfalls)
 - [Key Takeaways](#key-takeaways)
+- [Exercises](#exercises)
 
 ## Core Concepts
 
@@ -433,3 +434,11 @@ In C++11 and later, the sign of `a % b` is defined to match the sign of `a` (the
 - **Bitwise operators are essential** for systems programming — flags, masks, and bit manipulation are everyday patterns in performance-critical and low-level code.
 - **Signed integer overflow is undefined behavior.** Unsigned overflow wraps. Know the difference and check *before* you overflow.
 - **Always parenthesize bitwise expressions** in comparisons — `&`, `|`, and `^` have lower precedence than `==`, which causes subtle bugs.
+
+## Exercises
+
+1. What does `13 / 4` evaluate to in C++? What about `13.0 / 4`? Explain the difference.
+2. Given `int* ptr = nullptr;`, explain why `if (ptr && *ptr > 0)` is safe but `if (*ptr > 0 && ptr)` is not.
+3. Write a function that uses bitwise operators to check whether a specific bit (given by position `n`) is set in an unsigned integer.
+4. Explain why `a & b == 0` does not test whether `a AND b` is zero. What does it actually evaluate to, and how do you fix it?
+5. What is the difference between signed and unsigned integer overflow in C++? Which one is undefined behavior?

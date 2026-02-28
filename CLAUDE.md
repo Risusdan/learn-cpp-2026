@@ -37,6 +37,7 @@ Every lesson file must follow this exact structure:
 - [Code Examples](#code-examples)
 - [Common Pitfalls](#common-pitfalls)
 - [Key Takeaways](#key-takeaways)
+- [Exercises](#exercises)
 
 ## Core Concepts
 
@@ -71,6 +72,13 @@ clean structure. Each example should be self-contained and compilable.]
 
 - Bullet list of 3-5 most important points
 - What to remember, what to internalize
+
+## Exercises
+
+[3–5 exercises per lesson. Mix of:
+- Concept questions: "Explain why...", "What happens when...", "What is the difference between..."
+- Coding challenges: "Write a program/function that..."
+Do not include solutions.]
 ```
 
 ## Writing Style
@@ -80,7 +88,7 @@ clean structure. Each example should be self-contained and compilable.]
 - **Structure**: Build intuition first, then add precision. Use analogies for abstract ideas.
 - **Why-first**: For every concept, always explain *why* it exists, *why* this approach, and *why* it matters. The "why" is more important than the "what."
 - **Paragraphs**: Keep short — 3-5 sentences max. Dense walls of text kill learning.
-- **No exercises**: Do not include practice problems, homework, or challenges.
+- **Exercises**: Include a `## Exercises` section at the end of each lesson with 3–5 exercises (concept-explanation questions or small coding challenges). Do not include solutions.
 - **No external resources**: Do not include "Further Reading" sections or links to external material.
 
 ## Code Example Standards
