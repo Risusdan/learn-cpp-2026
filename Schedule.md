@@ -8,24 +8,24 @@
 | ---- | ---------------------------------------------- | -------------- |
 | 1    | Introduction & Environment Setup               | ✅ Done        |
 | 2    | Operators & Control Flow                       | ✅ Done        |
-| 3    | Functions — Overloading & Operator Overloading | ⬜ Not started |
-| 4    | Lambdas & Static Polymorphism                  | ⬜ Not started |
-| 5    | Data Types & References / Memory Model         | ⬜ Not started |
-| 6    | Smart Pointers & Memory Safety                 | ⬜ Not started |
-| 7    | Structuring a Codebase                         | ⬜ Not started |
-| 8    | OOP & Dynamic Polymorphism                     | ⬜ Not started |
-| 9    | Multiple Inheritance & Rule of 0/5/3           | ⬜ Not started |
-| 10   | Exception Handling                             | ⬜ Not started |
-| 11   | auto & Type Casting                            | ⬜ Not started |
-| 12   | Undefined Behavior, ADL & Macros               | ⬜ Not started |
-| 13   | STL Containers, Iterators & iostream           | ⬜ Not started |
-| 14   | STL Algorithms, chrono & Multithreading        | ⬜ Not started |
-| 15   | Templates — Basics & Variadic Templates        | ⬜ Not started |
-| 16   | Template Specialization & Type Traits          | ⬜ Not started |
-| 17   | SFINAE, enable_if & Compile-Time Dispatch      | ⬜ Not started |
-| 18   | Idioms — RAII, Copy-and-Swap, Erase-Remove     | ⬜ Not started |
-| 19   | Pimpl, COW, CRTP & Standards Overview          | ⬜ Not started |
-| 20   | Tooling, Libraries & Capstone Project          | ⬜ Not started |
+| 3    | Functions — Overloading & Operator Overloading | ✅ Done        |
+| 4    | Lambdas & Static Polymorphism                  | ✅ Done        |
+| 5    | Data Types & References / Memory Model         | ✅ Done        |
+| 6    | Smart Pointers & Memory Safety                 | ✅ Done        |
+| 7    | Structuring a Codebase                         | ✅ Done        |
+| 8    | OOP & Dynamic Polymorphism                     | ✅ Done        |
+| 9    | Multiple Inheritance & Rule of 0/5/3           | ✅ Done        |
+| 10   | Exception Handling                             | ✅ Done        |
+| 11   | auto & Type Casting                            | ✅ Done        |
+| 12   | Undefined Behavior, ADL & Macros               | ✅ Done        |
+| 13   | STL Containers, Iterators & iostream           | ✅ Done        |
+| 14   | STL Algorithms, chrono & Multithreading        | ✅ Done        |
+| 15   | Templates — Basics & Variadic Templates        | ✅ Done        |
+| 16   | Template Specialization & Type Traits          | ✅ Done        |
+| 17   | SFINAE, enable_if & Compile-Time Dispatch      | ✅ Done        |
+| 18   | Idioms — RAII, Copy-and-Swap, Erase-Remove     | ✅ Done        |
+| 19   | Pimpl, COW, CRTP & Standards Overview          | ✅ Done        |
+| 20   | Tooling, Libraries & Capstone Project          | ✅ Done        |
 
 ---
 
@@ -63,7 +63,7 @@
 - [ ] Function Overloading — same name, different parameter types/counts
 - [ ] Why overloading matters — consistent interface, reduced cognitive load for callers
 - [ ] Overload resolution rules — how the compiler picks the best match
-- [ ] Operator Overloading — defining `+`, `==`, `<<`, `[]` etc. for custom types
+- [ ] Operator Overloading — defining `+`, `<<`, `[]`, etc. for custom types
 - [ ] When to overload operators — only when the meaning is intuitive and unsurprising
 - [ ] Friend functions vs member functions for operator overloading
 
