@@ -872,3 +872,7 @@ private:
    Explain why this is NOT exception-safe, describe exactly what state `*this` is in if `new[]` throws, and rewrite it using copy-and-swap.
 
 5. Implement a `UniqueFunction` class — a simplified, move-only version of `std::function` that stores a callable using type erasure (a `void*` to a heap-allocated callable + a function pointer for invocation + a function pointer for deletion). Use RAII to manage the heap allocation, and implement copy-and-swap for the assignment operator. The class should support `operator()` to invoke the stored callable.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

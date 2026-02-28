@@ -819,3 +819,7 @@ int main() {
    ```
 
 5. A colleague argues that UB sanitizers are unnecessary because "if the program works correctly in testing, there's no UB." Write a short argument (3-5 sentences) explaining why this reasoning is flawed. Include at least one concrete example of how UB can appear to work correctly and then break.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

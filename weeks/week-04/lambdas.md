@@ -691,3 +691,7 @@ Capturing `this` is capturing a raw pointer. If the lambda outlives the object, 
    }
    ```
 5. Use an immediately-invoked lambda to initialize a `const std::vector<int>` containing the first 20 even numbers (0, 2, 4, ..., 38). The variable must be `const`.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

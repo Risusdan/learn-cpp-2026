@@ -765,3 +765,7 @@ int main() {
 4. Write a program that demonstrates the difference between `std::map::operator[]` and `std::map::find()`. Create a scenario where using `operator[]` for a lookup causes a subtle bug (the map grows unexpectedly), then fix it using `find()`.
 
 5. Implement a simple `FrequencyCounter` class that takes a `std::vector<std::string>` and provides two methods: `count(word)` returning how many times a word appeared, and `top_n(n)` returning the n most frequent words in descending order of frequency. Choose the appropriate container(s) and justify your choices in comments.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

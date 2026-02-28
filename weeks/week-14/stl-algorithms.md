@@ -695,3 +695,7 @@ int main() {
    });
    ```
    Explain why this is undefined behavior. Fix it, and then modify it to be a stable sort that preserves the original order of pairs with equal second elements.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

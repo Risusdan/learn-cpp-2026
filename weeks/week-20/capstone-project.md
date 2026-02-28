@@ -737,3 +737,7 @@ The exercises for this lesson are the five milestones themselves. Complete them 
 4. **Milestone 4 — Thread Safety**: Wrap the store in `ConcurrentKVStore` using `std::shared_mutex`. Write a stress test that spawns 4 writer threads and 8 reader threads, each performing 1000 operations. Run with `-fsanitize=thread` and verify no data races are reported.
 
 5. **Milestone 5 — CLI & Polish**: Create the `CMakeLists.txt`, implement the command-line interface, and add a `DUMP` command that serializes all entries. Ensure the project builds with `cmake --build .` and all tests pass with `ctest`.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

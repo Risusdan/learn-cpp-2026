@@ -783,3 +783,7 @@ int main() {
 4. Write a small program that demonstrates the difference in behavior between diamond inheritance *with* and *without* virtual base classes. Print the address of the base sub-object(s) from the most-derived class to prove that virtual inheritance produces a single shared instance.
 
 5. A colleague argues that virtual inheritance completely solves the diamond problem and is always safe to use. Write a counterargument explaining at least three costs or risks that virtual inheritance introduces.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

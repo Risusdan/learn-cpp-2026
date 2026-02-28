@@ -848,3 +848,7 @@ void process(int value) {
    }
    ```
    Explain the deadlock scenario that can occur when two threads call `transfer(a, b, 100)` and `transfer(b, a, 50)` simultaneously. How does `std::scoped_lock` solve this problem?
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

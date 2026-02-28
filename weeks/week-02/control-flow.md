@@ -550,3 +550,7 @@ Modifying a container while iterating over it is one of the most dangerous patte
 3. Write a program that uses a range-based `for` loop to print only the even numbers from a `std::vector<int>`.
 4. Explain when you would use a `do while` loop instead of a `while` loop. Give a concrete example.
 5. Why does declaring a variable inside a `switch` case without braces cause a compiler error? What is the fix?
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

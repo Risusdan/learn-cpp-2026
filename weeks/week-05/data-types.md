@@ -738,3 +738,7 @@ int main() {
 4. You have a function that receives a `Shape*` and uses `dynamic_cast` to check if it's a `Circle*` or `Rectangle*` to call type-specific methods. Describe two alternative designs that eliminate the need for `dynamic_cast` (one using virtual methods, one using `std::variant`). What are the tradeoffs of each?
 
 5. Write a `Calculator` that uses `std::variant<int, double>` to represent numeric values and implements `add`, `multiply`, and `to_string` operations using `std::visit`. The operations should handle mixed-type arithmetic (e.g., `int + double` should produce a `double`).
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

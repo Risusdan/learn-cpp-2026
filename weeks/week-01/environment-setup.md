@@ -268,3 +268,7 @@ Source files are text — they're instructions for the compiler, not for the OS.
 2. What does the `-std=c++17` flag tell the compiler, and what happens if you use a C++17 feature without it?
 3. Write a program split across two files (`math_utils.h` / `math_utils.cpp` and `main.cpp`) that defines and uses a `square(int)` function. Write the commands to compile and link them.
 4. Explain what the preprocessor does and why `#include` guards (or `#pragma once`) are necessary.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

@@ -22,6 +22,7 @@ This is a self-study curriculum for learning C++ from fundamentals to expert lev
    ### Week 1 — [Week Title from Schedule]
    - [Lesson Title](weeks/week-01/lesson-name.md)
    ```
+6. **Add metadata footer** to every lesson file — see the lesson template below for the exact format.
 
 ## Lesson File Template
 
@@ -79,6 +80,10 @@ clean structure. Each example should be self-contained and compilable.]
 - Concept questions: "Explain why...", "What happens when...", "What is the difference between..."
 - Coding challenges: "Write a program/function that..."
 Do not include solutions.]
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/seed
 ```
 
 ## Writing Style

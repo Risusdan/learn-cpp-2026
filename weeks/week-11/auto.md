@@ -614,3 +614,7 @@ The compiler enforces an exact match between the number of names and the number 
    ```
 
 5. Write a function that returns a `std::tuple<bool, std::string, int>` representing a validation result (success, message, error code). At the call site, use structured bindings to decompose the result, and use an `if`-with-initializer (C++17) to combine the decomposition with a conditional check.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

@@ -901,3 +901,7 @@ int main() {
 4. **`std::variant` state machine.** Model a simple connection state machine using `std::variant`. The states are: `Disconnected` (no data), `Connecting` (holds a hostname string), `Connected` (holds an IP string and a port int), `Error` (holds an error message string). Write a `describe_state` function using `std::visit` that prints a human-readable description of each state. Show how to transition between states by assigning different alternatives to the variant.
 
 5. **Feature trade-offs.** You are choosing between C++17 and C++20 for a new embedded firmware project. The compiler (arm-none-eabi-g++ 12) supports C++20, but the rest of your team has never used Concepts or Ranges. Write a brief argument (3-5 sentences) for each side. Which would you choose, and why?
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

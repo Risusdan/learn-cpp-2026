@@ -1078,3 +1078,7 @@ int main() {
    }
    ```
    Explain the role of ADL in the range-based `for` loop (`std::begin(c)` and `std::end(c)` vs `begin(c)` and `end(c)`). What would change if the `Container` type is a user-defined container in a custom namespace with its own `begin()` and `end()` free functions? Would this code still work? Why or why not?
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

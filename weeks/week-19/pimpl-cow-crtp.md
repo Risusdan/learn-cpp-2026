@@ -971,3 +971,7 @@ int main() {
    - A game engine that needs polymorphic behavior for different entity types (player, enemy, NPC) in a tight update loop running at 60 FPS
    - A document editor where undo/redo stores snapshots of the document state
    - A plugin system where third-party developers can add new behavior types at runtime
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

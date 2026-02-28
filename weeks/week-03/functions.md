@@ -572,3 +572,7 @@ int main() {
    What happens when you call `Derived d; d.draw(42);`? Explain the problem and fix it.
 
 5. Write an overload set for a function `clamp` that works on `int`, `double`, and `char` values. Each overload takes a value, a minimum, and a maximum, and returns the value constrained to `[min, max]`. Make the functions `constexpr` where possible. Explain why you chose each parameter type (value vs const reference).
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

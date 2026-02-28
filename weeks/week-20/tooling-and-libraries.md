@@ -951,5 +951,5 @@ The `-fno-omit-frame-pointer` flag ensures sanitizer stack traces include every 
 5. **gtest fixture.** Write a gtest test fixture for a `StringBuffer` class that has `append(std::string_view)`, `size()`, and `to_string()` methods. The fixture should create a `StringBuffer` in `SetUp()` with some initial content. Write at least three tests using `TEST_F`: one testing `append`, one testing `size`, and one testing `to_string`. Use both `EXPECT_` and `ASSERT_` macros appropriately.
 
 ---
-up:: [MOC-Cpp](../../../MOC-Cpp.md)
-#type/learning #source/self-study #status/seed
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

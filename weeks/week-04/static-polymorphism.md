@@ -737,3 +737,7 @@ Templates trade binary size for runtime performance. Each instantiation duplicat
    ```
 4. You have a `print_area()` function that calculates the area of different shapes (Circle, Rectangle, Triangle). Design both a template-based solution and a virtual-function-based solution. When would you choose one over the other?
 5. Write a template function `contains(const Container& c, const Value& v)` that returns `true` if the value is found in the container. It should work with `std::vector`, `std::string`, and any other type that provides `begin()` and `end()`. Why does this approach not work with `std::map` out of the box?
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

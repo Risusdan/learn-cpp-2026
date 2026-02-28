@@ -83,3 +83,7 @@ A structured path to becoming an expert C++ developer in 20 weeks.
 ### Week 20 — Tooling, Libraries & Capstone Project
 - [Tooling & Libraries](weeks/week-20/tooling-and-libraries.md)
 - [Capstone Project](weeks/week-20/capstone-project.md)
+
+---
+up:: [MOC-Programming](../../../01-index/MOC-Programming.md)
+#type/learning #source/self-study #status/evergreen

@@ -904,3 +904,7 @@ int main() {
    ```
 
 5. Redesign the `FileHandle` class from the code examples section so that it follows the Rule of Zero. Use `std::unique_ptr` with a custom deleter. Verify that the resulting class is move-only (not copyable) without you having to explicitly delete the copy operations.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

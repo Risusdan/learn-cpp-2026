@@ -880,3 +880,7 @@ int main() {
    - `operator!` (matrix inverse)
 
 5. Write a `Temperature` class that stores a value in Celsius. Implement `operator+`, `operator-`, `operator==`, `operator<`, `operator<<`, and a compound `operator+=`. Ensure that `25.0 + Temperature(10)` works. Add a `to_fahrenheit()` const member function. Write a `main()` that demonstrates all operators and sorts a `std::vector<Temperature>` using `std::sort`.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

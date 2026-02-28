@@ -1007,3 +1007,7 @@ int main() {
    - `bare_type` (a type alias via `using` — the type after applying `std::decay_t` and `std::remove_pointer_t`)
    - A `static std::string describe()` method that returns a human-readable description like `"numeric pointer"` or `"string-like container"`.
    Test with `TypeAnalyzer<const int*>`, `TypeAnalyzer<std::vector<int>&>`, and `TypeAnalyzer<std::string>`.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

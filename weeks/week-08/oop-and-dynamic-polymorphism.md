@@ -1020,3 +1020,7 @@ void example() {
 4. **Coding challenge**: Create a simple expression tree using dynamic polymorphism. Define an abstract `Expression` class with a pure virtual `evaluate() -> double` method. Implement `Literal` (holds a double), `Add` (holds two `unique_ptr<Expression>`), and `Multiply` (holds two `unique_ptr<Expression>`). Build the expression `(3 + 4) * 2` as a tree and evaluate it. Then rewrite the same expression tree using `std::variant<Literal, Add, Multiply>` and `std::visit`. Compare the two approaches: which required more boilerplate? Which would be easier to extend with a new node type?
 
 5. **Analysis question**: You have a tight loop that processes 10 million particles per frame. Each particle has a `virtual void update(float dt)` method with three derived types (`Smoke`, `Spark`, `Rain`). A profiler shows that 15% of frame time is spent in vtable dispatch overhead. Propose two concrete strategies to eliminate or reduce the virtual call overhead while keeping the code maintainable. Explain the trade-offs of each approach.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

@@ -751,4 +751,4 @@ C++20 Concepts address this by letting you declare requirements on template para
 
 ---
 up:: [Schedule](../../Schedule.md)
-#type/learning #source/self-study #status/seed
+#type/learning #source/self-study #status/evergreen

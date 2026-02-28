@@ -315,3 +315,5 @@
 **Why It Matters**: Knowing the language isn't enough — you need to know the ecosystem. CMake is the de facto build system for C++ (every major project uses it). Understanding compiler stages explains *why* you get cryptic linker errors ("undefined reference") and how to fix them. gtest is the industry-standard testing framework. This week turns knowledge into practical skill.
 
 ---
+up:: [MOC-Programming](../../../01-index/MOC-Programming.md)
+#type/learning #source/self-study #status/evergreen

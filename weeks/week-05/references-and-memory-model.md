@@ -817,3 +817,7 @@ int main() {
 4. A function returns `const std::vector<int>&` — a reference to a local `std::vector`. The caller stores the result in `const auto& result`. Explain why this is dangerous, what undefined behavior occurs, and how to fix it.
 
 5. Given a `std::vector<std::string>` with 1000 elements, you take a `const std::string&` reference to element [0], then call `push_back` to add a new element. Is the reference still valid? Explain why or why not, and describe how to safely access element [0] after the `push_back`.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

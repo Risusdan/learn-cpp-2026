@@ -909,3 +909,7 @@ int main() {
    };
    ```
    Explain why this class is actually non-moveable (despite the intent), what will happen if someone tries `Handle h2 = std::move(h1);`, and how to fix the class to make it truly move-only.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

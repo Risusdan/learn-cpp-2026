@@ -781,3 +781,7 @@ int main() {
    ```
 
 5. Implement a `TypeName<T>` class template that returns a human-readable string for the type. Use partial specialization to handle `const T`, `T*`, `T&`, and `T&&`, recursively decomposing compound types. For example, `TypeName<const int*&>::name()` should return something like `"ref to ptr to const int"`. Test with at least five different compound types.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

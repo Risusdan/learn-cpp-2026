@@ -873,3 +873,7 @@ int main() {
    - For each student, uses `std::accumulate` with iterators to compute the average score
    - Prints a formatted table using `std::setw` and `std::fixed` with 1 decimal place
    - Explain which iterator category the map provides and why that matters for the algorithms you chose.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

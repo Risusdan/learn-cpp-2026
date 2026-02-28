@@ -442,3 +442,7 @@ In C++11 and later, the sign of `a % b` is defined to match the sign of `a` (the
 3. Write a function that uses bitwise operators to check whether a specific bit (given by position `n`) is set in an unsigned integer.
 4. Explain why `a & b == 0` does not test whether `a AND b` is zero. What does it actually evaluate to, and how do you fix it?
 5. What is the difference between signed and unsigned integer overflow in C++? Which one is undefined behavior?
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

@@ -810,3 +810,7 @@ C-style casts are dangerous because they silently compose multiple cast operatio
    - Checking at runtime whether a `Shape*` actually points to a `Circle`
    - Calling a legacy C function that takes `char*` when you have a `const char*` and you know the function doesn't modify the string
    - Examining the raw bytes of a `struct` for serialization
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

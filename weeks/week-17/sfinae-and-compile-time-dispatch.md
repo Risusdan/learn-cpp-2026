@@ -1048,5 +1048,5 @@ int main() {
 5. Write a function template `deep_copy` that uses `if constexpr` to choose between `std::memcpy` (for trivially copyable types) and element-wise copy construction (for non-trivially copyable types) when copying an array of `N` elements from a source pointer to a destination pointer. Test it with `int` (trivially copyable) and `std::string` (not trivially copyable).
 
 ---
-up:: [MOC-Cpp](../../../MOC-Cpp.md)
-#type/learning #source/self-study #status/seed
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

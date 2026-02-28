@@ -952,3 +952,7 @@ public:
    Which `#include`s are actually needed in this header? Remove the unnecessary ones and explain where they should go instead.
 
 5. You are writing a library with a `protocol::encode()` function in `protocol.cpp`. This function uses three helper functions: `compute_crc()`, `pad_to_alignment()`, and `validate_header()`. None of these helpers should be callable from outside `protocol.cpp`. Write the skeleton of `protocol.h` and `protocol.cpp` showing how you would structure the declarations, definitions, and internal linkage. Use a namespace for the public API and an anonymous namespace for the helpers.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

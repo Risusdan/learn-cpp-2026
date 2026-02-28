@@ -969,5 +969,5 @@ void safe_unchecked_access(std::vector<int>& v, std::size_t index) noexcept {
 5. **Concept question**: A colleague writes a destructor that calls a function which might throw, and wraps it in a `try`/`catch` that swallows the exception. Is this acceptable? What would happen if the destructor did NOT catch the exception? What if the destructor were called during stack unwinding from another exception?
 
 ---
-up:: [MOC-Cpp](../../../../01-index/MOC-Cpp.md)
-#type/learning #source/self-study #status/seed
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen

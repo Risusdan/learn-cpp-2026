@@ -982,3 +982,7 @@ int main() {
    }
    ```
    Identify the exception safety problem. What happens if `push_back` throws (e.g., due to memory allocation failure for the vector's internal storage)? Rewrite the function using `make_shared` to eliminate the issue.
+
+---
+up:: [Schedule](../../Schedule.md)
+#type/learning #source/self-study #status/evergreen
